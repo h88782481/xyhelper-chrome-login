@@ -34,6 +34,6 @@ curl --location --request POST 'https://public.xyhelper.cn/oauth/token' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "grant_type": "refresh_token",
-    "refresh_token": "0F2ArQ0MBeNz1OibwtzL8VKJCZuDtxh2PiAP_aw7MSmFF"
+    "refresh_token": "your refresh_token"
 }'
 ```
