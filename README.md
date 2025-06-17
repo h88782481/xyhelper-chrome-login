@@ -3,7 +3,8 @@
 ```
 变更通知
 
-因官方接口变更,auth0模式不再支持触发邮件验证后的rt获取,新增auth模式,该模式将返回XyhelperToken(自最后一次刷新或获取后有效期一年)
+因官方接口变更,auth0模式不再支持触发邮件验证后的rt获取,新增auth模式,
+该模式将返回XyhelperToken(自最后一次刷新或获取后有效期一年)
 ```
 
 
@@ -25,3 +26,14 @@
 
 ## 使用方法
 点击插件图标，将自动打开chatgpt的登录页面，登录后即可获取refreshToken。
+
+
+```shell
+# refreshToken获取accessToken
+curl --location --request POST 'https://public.xyhelper.cn/oauth/token' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "grant_type": "refresh_token",
+    "refresh_token": "0F2ArQ0MBeNz1OibwtzL8VKJCZuDtxh2PiAP_aw7MSmFF"
+}'
+```
