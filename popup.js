@@ -1,11 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-    chrome.storage.local.get(['location', 'codeVerifier'], function (data) {
+    chrome.storage.local.get(['location', 'codeVerifier', 'mode'], function (data) {
         const accessTokenDiv = document.getElementById('accessToken');
         const refreshTokenDiv = document.getElementById('refreshToken');
         const sessionDiv = document.getElementById('session');
+        const modeInfoDiv = document.getElementById('mode-info');
+        
+        // 显示使用的登录模式
+        if (data.mode) {
+            modeInfoDiv.textContent = `使用${data.mode === 'auth0' ? 'Auth0' : 'Auth'}模式获取的令牌`;
+        }
         
         if (data.location && data.codeVerifier) {
-            fetch('https://showing-protect-machinery-shot.trycloudflare.com/api/getsession', {
+            fetch('https://public.xyhelper.cn/api/getsession', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

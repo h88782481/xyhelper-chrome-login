@@ -1,4 +1,12 @@
 # xyhelper-chrome-login 
+
+```
+变更通知
+
+因官方接口变更,auth0模式不再支持触发邮件验证后的rt获取,新增auth模式,该模式将返回XyhelperToken(自最后一次刷新或获取后有效期一年)
+```
+
+
 一个获取refreshToken的小工具.公益服务,请勿滥用.
 
 

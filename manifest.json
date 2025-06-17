@@ -15,7 +15,8 @@
     "https://auth.openai.com/*"
   ],
   "action": {
-    "default_title": "XYHELPER-GPT"
+    "default_title": "XYHELPER-GPT",
+    "default_popup": "login-select.html"
   },
   "background": {
     "service_worker": "background.js"

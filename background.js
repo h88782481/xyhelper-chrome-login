@@ -1,28 +1,4 @@
-chrome.action.onClicked.addListener(async function (tab) {
-
-    
-    try {
-        const response = await fetch('https://showing-protect-machinery-shot.trycloudflare.com/gptlogin');
-        const data = await response.json();
-        const loginurl = data.loginurl;
-        const codeVerifier = data.codeVerifier;
-
-        if (loginurl && codeVerifier) {
-            chrome.storage.local.set({ loginurl: loginurl, codeVerifier: codeVerifier }, function () {
-                chrome.tabs.create({ url: loginurl });
-            });
-        } else {
-            console.log('未能获取登录链接');
-            console.log(data);
-            throw new Error('未能获取登录链接');
-        }
-    } catch (error) {
-        console.log(error);
-        chrome.storage.local.set({ error: error }, function () {
-            chrome.tabs.create({ url: 'error.html' });
-        });
-    }
-});
+// 登录请求现在通过popup界面处理，无需在这里处理点击事件
 chrome.webRequest.onBeforeRedirect.addListener(
     function (details) {
         console.log(details);
