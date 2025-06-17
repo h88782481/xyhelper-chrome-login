@@ -11,7 +11,8 @@
     "notifications"
   ],
   "host_permissions": [
-    "https://auth0.openai.com/*"
+    "https://auth0.openai.com/*",
+    "https://auth.openai.com/*"
   ],
   "action": {
     "default_title": "XYHELPER-GPT"

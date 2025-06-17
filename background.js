@@ -2,7 +2,7 @@ chrome.action.onClicked.addListener(async function (tab) {
 
     
     try {
-        const response = await fetch('https://login.closeai.biz/gptlogin');
+        const response = await fetch('https://showing-protect-machinery-shot.trycloudflare.com/gptlogin');
         const data = await response.json();
         const loginurl = data.loginurl;
         const codeVerifier = data.codeVerifier;
@@ -12,6 +12,8 @@ chrome.action.onClicked.addListener(async function (tab) {
                 chrome.tabs.create({ url: loginurl });
             });
         } else {
+            console.log('未能获取登录链接');
+            console.log(data);
             throw new Error('未能获取登录链接');
         }
     } catch (error) {

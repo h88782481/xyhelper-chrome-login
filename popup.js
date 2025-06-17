@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const sessionDiv = document.getElementById('session');
         
         if (data.location && data.codeVerifier) {
-            fetch('https://login.closeai.biz/api/getsession', {
+            fetch('https://showing-protect-machinery-shot.trycloudflare.com/api/getsession', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
