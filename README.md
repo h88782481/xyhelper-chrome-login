@@ -37,3 +37,12 @@ curl --location --request POST 'https://public.xyhelper.cn/oauth/token' \
     "refresh_token": "your refresh_token"
 }'
 ```
+
+```shell
+# 官方新版rt(以rt开头)换取XyhelperToken
+curl --location --request POST 'https://public.xyhelper.cn/oauth/oai2xy' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "refresh_token": "rt_xxxxxxx"
+}'
+```
