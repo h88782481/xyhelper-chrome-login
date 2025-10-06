@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录模式选择</title>
+    <title>登录类型选择</title>
     <style>
         :root {
             --primary-color: #4a90e2;
@@ -211,30 +211,30 @@
     <div class="container">
         <div class="header">
             <div class="logo">XY</div>
-            <div class="title">登录模式选择</div>
-            <div class="subtitle">请选择您的登录方式</div>
+            <div class="title">登录类型选择</div>
+            <div class="subtitle">请选择您的登录类型（GPT 或 SORA）</div>
         </div>
 
         <div class="buttons-container">
-            <button class="mode-button btn-auth0" id="mode-auth0">
+            <button class="mode-button btn-auth0" id="mode-gpt">
                 <span class="icon">🔐</span>
                 <div>
-                    <div>Auth0 模式</div>
-                    <div style="font-size: 12px; opacity: 0.8;">旧版认证模式,可获取官方Token,仅支持授权登录</div>
+                    <div>GPT 类型</div>
+                    <div style="font-size: 12px; opacity: 0.8;">常规登录流程，适用于 ChatGPT</div>
                 </div>
             </button>
 
-            <button class="mode-button btn-auth" id="mode-auth">
+            <button class="mode-button btn-auth" id="mode-sora">
                 <span class="icon">⚡</span>
                 <div>
-                    <div>Auth 模式</div>
-                    <div style="font-size: 12px; opacity: 0.8;">新版认证模式,可获取XyhelperToken,支持授权登录和密码登录</div>
+                    <div>SORA 类型</div>
+                    <div style="font-size: 12px; opacity: 0.8;">用于 SORA 相关流程的登录</div>
                 </div>
             </button>
         </div>
 
         <div class="description">
-            选择对应的登录模式开始获取您的ChatGPT访问令牌
+            选择对应的登录类型开始获取您的访问令牌
         </div>
 
         <div class="loading" id="loading">

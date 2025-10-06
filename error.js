@@ -1,3 +1,8 @@
+// 兼容 Firefox 与 Chrome 的 API 命名
+if (typeof chrome === 'undefined' && typeof browser !== 'undefined') {
+    var chrome = browser;
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     chrome.storage.local.get('error', function (result) {
         console.log(result);

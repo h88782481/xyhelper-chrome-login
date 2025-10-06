@@ -1,27 +1,26 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "xyhelper-login",
   "description": "获取ChatGPT的token",
   "version": "1.0",
   "permissions": [
     "tabs",
     "webRequest",
+    "webRequestBlocking",
     "storage",
     "cookies",
-    "notifications"
-  ],
-  "host_permissions": [
+    "notifications",
     "https://auth0.openai.com/*",
     "https://auth.openai.com/*",
     "https://public.xyhelper.cn/*",
     "http://127.0.0.1:8080/*"
   ],
-  "action": {
+  "browser_action": {
     "default_title": "XYHELPER-GPT",
     "default_popup": "login-select.html"
   },
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"]
   },
   "options_ui": {
     "page": "options.html",
@@ -30,7 +29,7 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "xyhelper-login@xyhelper.cn",
-      "strict_min_version": "109.0"
+      "strict_min_version": "91.0"
     }
   },
   "icons": {
